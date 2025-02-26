@@ -22,7 +22,7 @@ const ModuleCard = ({ icon, title, description, path, disabled }: Props) => {
   return (
     <Card
       className={cn(
-        'p-2 cursor-pointer transition-all hover:scale-[101%] hover:shadow-lg flex flex-col justify-between h-2/12',
+        'p-2 cursor-pointer transition-all hover:scale-[101%] hover:shadow-lg flex flex-col justify-between h-20',
         disabled && 'opacity-50 cursor-not-allowed'
       )}
       onClick={() => {
@@ -32,8 +32,12 @@ const ModuleCard = ({ icon, title, description, path, disabled }: Props) => {
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="flex items-center justify-start gap-2">
-            {icon}
-            {title}
+            <div className='text-2xl'>
+              {icon}
+            </div>
+            <div className='text-lg'>
+              {title}
+            </div>
           </CardTitle>
           <PiArrowRight className="w-5 h-5 text-zinc-800" />
         </div>

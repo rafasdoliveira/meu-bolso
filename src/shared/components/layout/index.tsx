@@ -19,7 +19,7 @@ const Layout = ({children, sidebarButton}: Props) => {
     <AppSidebar navMain={sidebarButton} />
     <SidebarInset>
       <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
-        <div className="flex items-center gap-2 px-4 border">
+        <div className="flex items-center gap-2 px-4">
           {/* Sidebar */}
 
           <SidebarTrigger className="-ml-1" />
@@ -42,7 +42,7 @@ const Layout = ({children, sidebarButton}: Props) => {
         </div>
       </header>
       {/* Conteúdo principal a ser renderizado, módulos */}
-      <div className="flex max-w-full min-h-[90%] max-h-[90%] border p-4">
+      <div className="flex max-w-full min-h-[90%] max-h-[90%] p-4">
 					<ScrollArea className="w-full p-4">
 						{children}
 					</ScrollArea>

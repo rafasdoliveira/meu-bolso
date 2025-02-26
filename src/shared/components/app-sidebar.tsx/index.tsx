@@ -4,10 +4,9 @@ import {
   Wallet 
 } from "lucide-react";
 import * as React from "react";
-
 import { NavMain } from "../nav-main";
 import { NavUser } from "../nav-user";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "../ui/sidebar";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenuButton, SidebarRail } from "../ui/sidebar";
 import { SidebarButton } from "@shared/types/sidebarButton";
 // import { useUser } from "../../contexts/UserContext"; 
 
@@ -25,10 +24,14 @@ export function AppSidebar({ navMain, ...props }: { navMain: SidebarButton[] } &
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         {/* Aplicar a logo da Meu Bolso */}
-        <Wallet size={20} className="border w-full" />
+        <SidebarMenuButton>
+          <Wallet size={20} className="w-full" />
+          <span className="uppercase font-bold">Meu Bolso</span>
+        </SidebarMenuButton>
       </SidebarHeader>
       {/* Conteúdo a ser renderizado no sidebar */}
       <SidebarContent>
+     
         <NavMain items={navMain} />
       </SidebarContent>
       {/* Informações do usuário, redirecionamento para o perfil do usuário e log out */}
