@@ -1,11 +1,11 @@
-import { RouteObject } from "react-router-dom";
-import { CartoesPage } from "../pages";
+import { RouteObject } from 'react-router-dom';
+import { CartoesPage } from '../pages';
 
 const cartoesRoutes: RouteObject[] = [
-    {
-        path: "/cartoes",
-        element: <CartoesPage/>
-    }
-]
+  {
+    path: '/cartoes',
+    element: <CartoesPage />,
+  },
+];
 
-export { cartoesRoutes }
+export { cartoesRoutes };

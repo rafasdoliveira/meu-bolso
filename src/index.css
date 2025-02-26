@@ -123,6 +123,10 @@
   }
 }
 
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
 @layer base {
   :root {
     --sidebar-background: 0 0% 98%;

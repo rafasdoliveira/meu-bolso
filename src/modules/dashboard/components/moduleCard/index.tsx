@@ -32,12 +32,8 @@ const ModuleCard = ({ icon, title, description, path, disabled }: Props) => {
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="flex items-center justify-start gap-2">
-            <div className='text-2xl'>
-              {icon}
-            </div>
-            <div className='text-lg'>
-              {title}
-            </div>
+            <div className="text-2xl">{icon}</div>
+            <div className="text-lg">{title}</div>
           </CardTitle>
           <PiArrowRight className="w-5 h-5 text-zinc-800" />
         </div>

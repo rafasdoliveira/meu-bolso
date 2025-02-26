@@ -1,11 +1,11 @@
-import { DespesasLayout } from "../components/layout"
+import { DespesasLayout } from '../components/layout';
 
 function DespesasPage() {
-    return(
-        <DespesasLayout>
-            <div>oie</div>
-        </DespesasLayout>
-    )
+  return (
+    <DespesasLayout>
+      <div>oie</div>
+    </DespesasLayout>
+  );
 }
 
-export { DespesasPage }
+export { DespesasPage };

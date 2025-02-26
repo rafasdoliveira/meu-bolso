@@ -1,11 +1,7 @@
-import { ReceitasLayout } from "../components/layout"
+import { ReceitasLayout } from '../components/layout';
 
 function ReceitasPage() {
-    return(
-        <ReceitasLayout>
-            receitas
-        </ReceitasLayout>
-    )
+  return <ReceitasLayout>receitas</ReceitasLayout>;
 }
 
-export { ReceitasPage }
+export { ReceitasPage };

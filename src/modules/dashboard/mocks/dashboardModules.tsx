@@ -1,7 +1,7 @@
 import { DashboardModule } from '../types/dashboardModulesType';
-import { GiPayMoney, GiReceiveMoney } from "react-icons/gi";
-import { GoGoal } from "react-icons/go";
-import { FaRegCreditCard } from "react-icons/fa6";
+import { GiPayMoney, GiReceiveMoney } from 'react-icons/gi';
+import { GoGoal } from 'react-icons/go';
+import { FaRegCreditCard } from 'react-icons/fa6';
 
 const dashboardModules = () => {
   const modules: DashboardModule[] = [

@@ -6,11 +6,11 @@ import { receitasRoutes } from '../modules/receitas/routes/index.routes';
 import { cartoesRoutes } from '../modules/cartoes/routes/index.routes';
 
 const router = createBrowserRouter([
-    ...loginRoutes,
-    ...cartoesRoutes,
-    ...despesasRoutes,
-    ...receitasRoutes,
-    ...dashboardRoutes,
-    ]);
+  ...loginRoutes,
+  ...cartoesRoutes,
+  ...despesasRoutes,
+  ...receitasRoutes,
+  ...dashboardRoutes,
+]);
 
 export { router };
