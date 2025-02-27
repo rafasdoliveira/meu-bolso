@@ -3,15 +3,15 @@ import { GiPayMoney } from 'react-icons/gi';
 
 const SideBarButtonsDespesas: SidebarButton[] = [
   {
-    label: 'Despesas',
-    path: '/despesas',
+    label: 'Objetivos',
+    path: '/objetivos',
     disabled: false,
     icon: <GiPayMoney />,
     items: [
       {
         icon: <GiPayMoney />,
-        title: 'despesas',
-        path: '/despesas'
+        title: 'Meus Objetivos',
+        path: '/objetivos'
       }
     ]
   },

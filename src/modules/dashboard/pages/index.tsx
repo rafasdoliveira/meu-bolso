@@ -29,6 +29,10 @@ import {
 import { Badge } from '../../../shared/components/ui/badge';
 import { DashBoardLayout } from '../components/layout';
 import { cn } from '../../../shared/components/lib/utils';
+import { ListFilter } from 'lucide-react';
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator } from '../../../shared/components/ui/dropdown-menu';
+import { useState } from 'react';
+import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
 
 const DashBoardPage = () => {
   const navigate = useNavigate();
@@ -151,6 +155,11 @@ const DashBoardPage = () => {
       metodo: 'credito',
     },
   ];
+  type Checked = DropdownMenuCheckboxItemProps["checked"]
+
+  const [showStatusBar, setShowStatusBar] = useState<Checked>(true)
+  const [showActivityBar, setShowActivityBar] = useState<Checked>(false)
+  const [showPanel, setShowPanel] = useState<Checked>(false)
 
   return (
     <DashBoardLayout>
@@ -263,9 +272,44 @@ const DashBoardPage = () => {
         </div>
         <div className="flex gap-4 w-full mt-2 p-2 h-full max-h-[28vh]">
           <div className="p-2 border rounded-lg w-2/3">
-            <div className="flex items-center gap-2 border-b py-2">
+            <div className="flex items-center justify-between gap-2 border-b py-2">
+              <div className='flex items-center gap-2 '>
               <Activity size={20} className="text-[#00D47E]" />
-              Atividades Recentes
+                Atividades Recentes
+              </div>
+              <div>
+              <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline">
+                    <ListFilter/>
+                      Filtrar
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56">
+                    <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuCheckboxItem
+                      checked={showStatusBar}
+                      onCheckedChange={setShowStatusBar}
+                    >
+                      Status Bar
+                    </DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem
+                      checked={showActivityBar}
+                      onCheckedChange={setShowActivityBar}
+                      disabled
+                    >
+                      Activity Bar
+                    </DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem
+                      checked={showPanel}
+                      onCheckedChange={setShowPanel}
+                    >
+                      Panel
+                    </DropdownMenuCheckboxItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             </div>
             <div className="h-full max-h-[80%] overflow-y-auto">
               <Table>
@@ -300,7 +344,7 @@ const DashBoardPage = () => {
               </Table>
             </div>
           </div>
-          <div className="p-2 w-1/3">
+          <div className="p-2 w-1/3 border rounded-lg">
             <div className="flex justify-between h-10">
               <div className="flex items-center gap-2">
                 <FaRegCreditCard size={20} className="text-[#00D47E]" />

@@ -1,7 +1,7 @@
 import { CartoesLayout } from '../components/layout';
 
 function CartoesPage() {
-  return <CartoesLayout>receitas</CartoesLayout>;
+  return <CartoesLayout>Cartões</CartoesLayout>;
 }
 
 export { CartoesPage };

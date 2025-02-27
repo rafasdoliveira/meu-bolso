@@ -9,7 +9,7 @@ type SidebarSubItem = {
 type SidebarButton = {
   icon: JSX.Element;
   label: string;
-  // path: string;
+  path: string;
   disabled?: boolean;
   items?: SidebarSubItem[];
 };

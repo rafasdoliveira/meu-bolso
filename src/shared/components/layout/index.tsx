@@ -22,7 +22,6 @@ const Layout = ({ children, sidebarButton, breadcrumbs = [] }: Props) => {
             {/* Sidebar */}
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
-
             {/* Breadcrumb */}
             <BreadcrumbLayout
               items={breadcrumbs.map(({ label, path }) => ({
@@ -32,9 +31,8 @@ const Layout = ({ children, sidebarButton, breadcrumbs = [] }: Props) => {
             />
           </div>
         </header>
-
         {/* Conteúdo principal a ser renderizado, módulos */}
-        <div className="flex max-w-full min-h-[94%] border max-h-[95%]">
+        <div className="flex max-w-full min-h-[94%] max-h-[95%]">
           <ScrollArea className="w-full p-4">{children}</ScrollArea>
         </div>
       </SidebarInset>
